@@ -1,0 +1,165 @@
+/* Asosiy sozlamalar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Gradient fon */
+body {
+  background: linear-gradient(to right bottom, #f8cdda, #fcb69f, #a1c4fd, #c2ffd8);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #222;
+  padding: 30px;
+  transition: background 0.5s, color 0.5s;
+}
+
+/* Tungi rejim */
+.dark {
+  background: linear-gradient(to right bottom, #0f2027, #203a43, #2c5364);
+  color: #eee;
+}
+
+/* Konteyner */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+header h1 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Tugma faqat belgi bilan */
+#modeToggle {
+  font-size: 22px;
+  padding: 8px 12px;
+  border: none;
+  background: rgba(0, 0, 0, 0.15);
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  backdrop-filter: blur(5px);
+}
+#modeToggle:hover {
+  background: rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
+}
+.dark #modeToggle {
+  color: #ffeb3b;
+}
+
+/* Kurs kartasi */
+.course-card {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 40px;
+}
+.dark .course-card {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.course-card h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+.course-card p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+.course-card ul {
+  margin-left: 20px;
+  padding-left: 10px;
+}
+.course-card li {
+  margin-bottom: 8px;
+  list-style: '✅ ';
+}
+
+/* Footer */
+footer {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* 📱 Responsive Media Queries */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header h1 {
+    font-size: 22px;
+  }
+
+  #modeToggle {
+    font-size: 18px;
+    padding: 7px 10px;
+  }
+
+  .course-card {
+    padding: 20px;
+  }
+
+  .course-card h2 {
+    font-size: 20px;
+  }
+
+  .course-card p,
+  .course-card li {
+    font-size: 15px;
+  }
+
+  body {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
+
+  .course-card h2 {
+    font-size: 18px;
+  }
+
+  .course-card p,
+  .course-card li {
+    font-size: 14px;
+  }
+
+  #modeToggle {
+    font-size: 16px;
+  }
+}
